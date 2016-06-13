@@ -2,10 +2,14 @@
 
 <% @songs.each do |song| %>
   <div class="song">
-    <h3><a href="/songs/<%= song.id %>"><%= song.song_title %></a> <small>(by: <%= song.author %>)</small></h3>
-  
+    <h3><a class="btn btn-success" href="/songs/<%= song.id %>"><%= song.song_title %></a> <small>(by: <%= song.author %>)</small></h3>
+
     <p>
       <%= song.url %>
+    </p>
+
+     <p>
+      <%= song.created_at %>
     </p>
   </div>
 <% end %> 
